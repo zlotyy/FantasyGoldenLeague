@@ -1,68 +1,47 @@
 <template>
-  <div id="app">
-    <header>
-      <nav>
-        <ul>
-          <li class="nav-item">
-            <img class="logo" src="./assets/logo.png" />
-            Home Page
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <HomePage />
-    </main>
-  </div>
+  <v-app>
+    <v-navigation-drawer permanent>
+      <v-toolbar flat>
+        <v-list>
+          <v-list-tile>
+            <v-list-tile-title class="title">
+              {{ appName }}
+            </v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-toolbar>
+      <v-divider></v-divider>
+      <v-list dense class="pt-0">
+        <v-list-tile
+          v-for="item in items"
+          :key="item.title" >
+          <v-list-tile-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-content>
+      test
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue';
 
 export default {
-  name: 'app',
-  components: {
-    HomePage,
-  },
-};
+  name: 'App',
+  data () {
+    return {
+      appName: 'Fantasy Golden League',
+      items: [
+        { title: 'Test1' },
+      ],
+    }
+  }
+}
 </script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-main {
-  margin: 0 auto;
-  padding: 30px;
-  background-color: white;
-  /* width: 1024px; */
-  min-height: 400px;
-}
-header {
-  background-color: #b9b6b6;
-  /* width: 1084px; */
-  margin: 0 auto;
-}
-ul {
-  padding: 3px;
-  display: flex;
-}
-li {
-  /* background-color: #ffc107; */
-}
-.nav-item {
-  display: inline-block;
-  padding: 5px 10px;
-  font-size: 22px;
-  border-right: 1px solid #bbb;
-}
-.logo {
-  vertical-align: middle;
-  height: 30px;
-}
-</style>

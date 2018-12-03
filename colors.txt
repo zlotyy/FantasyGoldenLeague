@@ -1,0 +1,5 @@
+#000000 czarny
+#242424 ciemny szary
+#ffffff biały
+#FFC107 amber
+#FFF8E1 amber lighten-5

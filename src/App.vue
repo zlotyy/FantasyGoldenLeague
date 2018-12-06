@@ -13,13 +13,14 @@
       <v-divider></v-divider>
       <v-list dense class="pt-0">
         <v-list-tile
-          v-for="item in items"
-          :key="item.title" >
+          v-for="item in menuItems"
+          :key="item.home" >
           <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
+            <!-- <v-icon>{{ item.icon }}</v-icon> -->
+            &#9918;
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            <v-list-tile-title>{{ item }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -38,8 +39,12 @@ export default {
   data () {
     return {
       appName: 'Fantasy Golden League',
-      items: [
-        { title: 'Test1' },
+      menuItems: [
+        'Strona główna',
+        'Tabela',
+        'Skład',
+        'Punkty',
+        'Transfery'
       ],
     }
   }

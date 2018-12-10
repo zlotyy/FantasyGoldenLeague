@@ -24,24 +24,6 @@ const routes = [
     path: '/transfers',
     component: loadView('Transfers'),
   },
-  // children: [
-  //   {
-  //     path: 'table',
-  //     component: loadView('Table'),
-  //   },
-  //   {
-  //     path: 'myTeam',
-  //     component: loadView('MyTeam'),
-  //   },
-  //   {
-  //     path: 'points',
-  //     component: loadView('TeamPoints'),
-  //   },
-  //   {
-  //     path: 'transfers',
-  //     component: loadView('Transfers'),
-  //   },
-  // ],
 ];
 
 export default new VueRouter({

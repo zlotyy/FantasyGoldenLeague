@@ -23,4 +23,7 @@ export default {
   flex-direction: row;
   min-height: 100vh;
 }
+h1 {
+  padding: 15px;
+}
 </style>

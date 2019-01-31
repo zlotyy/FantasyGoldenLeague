@@ -1,10 +1,12 @@
 <template>
-  <v-content>
-    <h1>
-      Wybierz skład
-    </h1>
+  <v-container>
+    <v-flex mb-3>
+      <h1>
+        Wybierz skład
+      </h1>
+    </v-flex>
     <TeamSquad ref="teamSquad"></TeamSquad>
-  </v-content>
+  </v-container>
 </template>
 
 <script>

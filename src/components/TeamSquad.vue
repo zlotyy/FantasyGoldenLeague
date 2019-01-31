@@ -28,8 +28,13 @@ export default {
   data() {
     return {
       headers: [
-        { text: 'NAGŁÓWEK1', value: 'var1' },
-        { text: 'NAGŁÓWEK2', value: 'var2' },
+        { text: 'Nazwisko', value: 'var1' },
+        { text: 'Pozycja', value: 'var2' },
+        { text: 'Forma', value: 'var2' },
+        { text: 'Przeciwnik', value: 'var2' },
+        { text: 'Punkty razem', value: 'var2' },
+        { text: 'Punkty w kolejce ', value: 'var2' },
+        { text: 'Opcje', value: 'var2' },
       ],
       items: [
         {

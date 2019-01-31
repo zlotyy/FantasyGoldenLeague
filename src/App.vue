@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div id="main">
-      <Menu height="100vh"></Menu>
+      <Menu></Menu>
       <v-content>
         <router-view></router-view>
       </v-content>
@@ -21,7 +21,6 @@ export default {
 #main {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
 }
 h1 {
   padding: 15px;
